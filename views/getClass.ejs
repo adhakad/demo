@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+  
+  
+ 
+</head>
+  <body>
+        <nav class="navbar navbar-default">
+                <div class="container">
+                  <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Get Class</a>
+                    <a href="/getStudentUser/logoutss">Logout</a>
+                  </div>
+                </div>
+        </nav>
+
+
+            <div class="container-fluid" style="margin-top: 100px; padding:0px 0px 0px 20px;border-radius: 7px;"><!--background:linear-gradient(to right , #ff1d7f,#f7a3a6);-->
+              <div class="row" style="padding-top: 80px;padding-bottom: 50px;">                                
+                  <div class="col-xs-10 col-xs-offset-1  col-md-4 col-md-offset-4">
+                      <div class="owl-carousel owl-carousel-fullwidth-a">
+                         <div class="cards" style="box-shadow:0px 2px 8px 0px rgba(0,0,0,0.25);">
+                             <div class="boxs">  
+                                 <div class="imgs">
+                                  <img class="img2" src="./uploads/<%= records.image_id %>">
+                                  </div>
+                                 <div class="row" style="padding-left: 15px;">
+                                     <div class="col-xs-4">
+                                      <h1 style="color: #7b7b7b;font-size: 10px;font-family: sans-serif;font-weight: bold;letter-spacing: 2px;font-size: 25px;"><%= records.subject_name %>&nbsp;<%= records.class_name %></h1>
+                                     </div>
+                                 </div>
+                                 <div class="row">
+                                     <div class="col-xs-7">
+                                         <h6 style="color: #000;font-size: 12px;font-family: sans-serif;font-weight: bold;padding-bottom: 3px;">Tricks to improve your</h6>
+                                         <h6 style="color: #000;font-size: 12px;margin-left: 10px;font-family: sans-serif;font-weight: bold;">Vocabulary by </h6>
+                                     </div>
+                                     <div class="col-xs-5 card-btn">   
+                                          <a href="/room/<%= records.room_id %>" class="btn btn-md"><p>Join Now</p></a>     
+                                     </div>
+                                     <div class="col-xs-8">
+                                         <h6 style="font-size: 11px;font-family: sans-serif;"><p style="color:#7b7b7b;letter-spacing: 1px;">15 min * By </p></h6>
+                                     </div>
+                                     
+
+                                     
+                                     <div class="row" style="padding: 15px;">
+                                         <div class="col-xs-10 col-xs-offset-1" style="height: 1px;background-color:#a3a3a3; ">
+                                             
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                          </div>
+                          
+                      </div> 
+                  </div>
+              </div>
+          </div>
+
+
+          <div class="container">
+            <div class="row">
+                <h1>User Classes</h1><h3>
+                <br>
+          </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div style="border: 1px solid aqua;width: 300px;">
+                    <h4><%= records.subject_name %></h4>
+                    <h2><%= records.class_name %></h2>
+                    <a class="btn btn-success btn-md" href="">Join Class</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+ 
+                   
+
+
+              <footer>
+                <center><p style="text-align: center">CopyRight &copy; Abhishek Dhakad</p></center>
+              </footer>
+
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+              <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+              <script src="https://cdn.ckeditor.com/4.9.1/standard/ckeditor.js"></script>
+            
+          
+               </body>
+             </html>

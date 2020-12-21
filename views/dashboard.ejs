@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="styleses.css">
+</head>
+  <body>
+        <nav class="navbar navbar-default">
+                <div class="container">
+                  <div class="navbar-header">
+                    <a class="navbar-brand" href="#">TechBista Solution's</a>
+                  </div>
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="/add-new-category" class="dropdown-item">Add New Category</a></li>
+                    <li><a href="/passwordCategory" class="dropdown-item">View All Category</a></li>
+                    <li><a href="/classname">Class Details</a></li>
+                  </ul>
+                 
+                </div>
+              </nav>
+              <nav class="navbar navbar-default">
+                <div class="container">
+                  
+                  <ul class="nav navbar-nav">
+                    <li><a href="/admin-panel" class="dropdown-item">Admin</a></li>
+                    <li><a href="/teacher-admin-panel" class="dropdown-item">Teacher's Admin</a></li>
+                  </ul>
+                 
+                </div>
+              </nav>
+
+              
+    <div class="container-fluid" style="margin-top: 100px; padding:0px 0px 0px 20px;border-radius: 7px;"><!--background:linear-gradient(to right , #ff1d7f,#f7a3a6);-->
+        <div class="row" style="padding-top: 80px;padding-bottom: 50px;">                                
+            <div class="col-xs-12  col-md-10 col-md-offset-1">
+                <div class="owl-carousel owl-carousel-fullwidth-a">
+                    <% if(records.length > 0){
+                        records.forEach(function(row){
+                            
+                        %>
+                   <div class="cards" style="box-shadow:0px 2px 8px 0px rgba(0,0,0,0.25);">
+                       <div class="boxs">  
+                           <div class="imgs">
+                               <img class="img2" src="./uploads/<%= row.image %>">
+                            </div>
+                           <div class="row" style="padding-left: 15px;">
+                               <div class="col-xs-4">
+                                   <h6 style="color: #7b7b7b;font-size: 10px;font-family: sans-serif;font-weight: bold;letter-spacing: 2px;">MATHEMATICS</h6>
+                               </div>
+                           </div>
+                           <div class="row">
+                               <div class="col-xs-7">
+                                   <h6 style="color: #000;font-size: 12px;font-family: sans-serif;font-weight: bold;padding-bottom: 3px;">Tricks to improve your</h6>
+                                   <h6 style="color: #000;font-size: 12px;margin-left: 10px;font-family: sans-serif;font-weight: bold;">Vocabulary by <%= row.teachername %></h6>
+                               </div>
+                               <div class="col-xs-5 card-btn">   
+                                    <a href="/getStudentUser/<%= row._id %>" class="btn btn-md"><p>Join Now</p></a>     
+                               </div>
+                               <div class="col-xs-8">
+                                   <h6 style="font-size: 11px;font-family: sans-serif;"><p style="color:#7b7b7b;letter-spacing: 1px;">15 min * By <%= row.teachername %></p></h6>
+                               </div>
+                               
+                               
+                               <div class="row" style="padding: 15px;">
+                                   <div class="col-xs-10 col-xs-offset-1" style="height: 1px;background-color:#a3a3a3; ">
+                                       
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                    </div>
+                    <%  }) } %>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+  <div class="container">
+        <div class="row">
+            <h1>User Dashboard</h1>
+            <br>
+            
+            <% if(records.length > 0){
+                records.forEach(function(row){
+                    
+                %>
+                <a class="btn btn-success btn-md" href="/getClass/<%= row._id %>"><%= row.teachername %></a>
+               <%  }) } 
+            %>
+                   
+      </div>
+    </div>
+    
+    <footer>
+        <center><p style="text-align: center">CopyRight &copy; Abhishek Dhakad</p></center>
+         </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdn.ckeditor.com/4.9.1/standard/ckeditor.js"></script>
+  <script src="main.js" defer></script>
+       </body>
+     </html>
+     
